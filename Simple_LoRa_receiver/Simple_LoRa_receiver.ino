@@ -3,8 +3,10 @@
 // For more details, see https://github.com/jgromes/RadioLib/releases/tag/5.0.0
 #include <RadioLib.h>
 
-// BSFrance LoRa32u4II v1.2 pins:              8,  7,  4,  1
-// LILYGO TTGO ESP32 LoRa32 v2.1 T3_1.6 pins: 18, 26, 23, 33
+// LoRa pins for RadioLib (NSS-CS/DIO0/RESET/DIO1)
+//  - LILYGO TTGO ESP32 LoRa32 v2.1 T3_1.6: 18, 26, 23, 33
+//  - Heltec WiFi LoRa32 v1:                18, 26, 14, 33
+//  - BSFrance LoRa32u4II v1.2 pins:         8,  7,  4,  1
 SX1276 radio = new Module(18, 26, 23, 33);
 
 int received = 0;

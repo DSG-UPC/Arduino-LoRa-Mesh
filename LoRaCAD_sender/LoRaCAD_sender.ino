@@ -20,7 +20,10 @@ Task txTask(1000, TASK_FOREVER, &txCallback);
 
 Scheduler runner;
 
-// LILYGO TTGO ESP32 LoRa32 v2.1 T3_1.6 pins: 18, 26, 23, 33
+// LoRa pins for RadioLib (NSS-CS/DIO0/RESET/DIO1)
+//  - LILYGO TTGO ESP32 LoRa32 v2.1 T3_1.6: 18, 26, 23, 33
+//  - Heltec WiFi LoRa32 v1:                18, 26, 14, 33
+//  - BSFrance LoRa32u4II v1.2 pins:         8,  7,  4,  1
 SX1276 radio = new Module(18, 26, 23, 33);
 
 // SSD1306 OLED display pins
